@@ -32,8 +32,22 @@ namespace ishare
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddAuthentication()
+                .AddGoogle(options =>
+                {
+                    options.ClientId = Configuration["App:GoogleClientId"];
+                    options.ClientSecret = Configuration["App:GoogleClientSecret"];
+                })
+                .AddFacebook(options =>
+                {
+                    options.ClientId = Configuration["App:FacebookClientId"];
+                    options.ClientSecret = Configuration["App:FacebookClientSecret"];
+                });
+                
+
             services.AddControllersWithViews();
         }
 
