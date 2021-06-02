@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ishare", "ishare\ishare.csproj", "{36237546-D265-4875-A080-29345A5E4389}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ishare", "ishare\ishare.csproj", "{36237546-D265-4875-A080-29345A5E4389}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DevExtreme NuGet.config", "DevExtreme NuGet.config", "{2A0D0D70-B79D-4EED-A9E0-D5DCC969B501}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet.config = NuGet.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -48,7 +48,7 @@ namespace ishare
                 });
                 
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
